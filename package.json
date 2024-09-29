@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -23,6 +25,20 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
+    "tailwindcss": "^3.4.13",
     "vite": "^5.4.1"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Migeen/Memory-Card.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Migeen/Memory-Card/issues"
+  },
+  "homepage": "https://github.com/Migeen/Memory-Card#readme"
 }
