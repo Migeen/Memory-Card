@@ -14,7 +14,7 @@ const CardContainer = () => {
         <div className='bg-gray-700 w-ful h-4/5 p-7 flex justify-center'>
             <div className='bg-white w-4/5 h-full flex flex-wrap p-20 gap-14 '>
                 <Card/>
-
+                    
                 <Card/>          
             </div>
         </div>
