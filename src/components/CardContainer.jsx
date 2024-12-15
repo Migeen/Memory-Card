@@ -1,4 +1,16 @@
 import React from 'react'
+import GetImages from './GetImages';
+
+const gameCards =  async (len) => {
+    const cards = await GetImages(0, length);
+  const CardsArray = [];
+  cards.forEach((card) => {
+    let flag = [card, 0];
+    CardsArray.push(flag);
+  });
+  console.log(CardsArray);
+  return CardsArray;
+} 
 
 const Card = () => {
 
