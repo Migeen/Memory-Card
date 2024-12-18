@@ -83,8 +83,8 @@ const CardContainer = () => {
                   </li>                    
                   
                 ))}
-                <h1>Score {score}</h1>
-                <h1>Highest {highest}</h1>          
+                <h1>Score: {score}</h1>
+                <h1>Highest: {highest}</h1>          
             </ul>
         </div>
     )
