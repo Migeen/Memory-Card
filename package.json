@@ -2,12 +2,15 @@
   "name": "memory_card",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "engines": {
+    "node": "18.x"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
@@ -41,4 +44,5 @@
     "url": "https://github.com/Migeen/Memory-Card/issues"
   },
   "homepage": "https://github.com/Migeen/Memory-Card#readme"
+  
 }
