@@ -8,6 +8,7 @@ function App() {
     <div className='flex flex-col w-full h-screen'>
       <Header/> 
       <CardContainer/>   
+      
     </div>
   );
 }

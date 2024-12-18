@@ -165,6 +165,7 @@ const GetImages = async (start, len) => {
             `https://pokeapi.co/api/v2/pokemon/${pokemon}`
           );
           const data = await response.json();
+          
           return data.sprites.front_default;
         })
       );

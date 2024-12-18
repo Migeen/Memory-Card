@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import GetImages from './GetImages';
 
 const gameCards =  async (len) => {
-    const cards = await GetImages(0, length);
+    const cards = await GetImages(0, len);
   const CardsArray = [];
   cards.forEach((card) => {
     let flag = [card, 0];
@@ -11,14 +11,6 @@ const gameCards =  async (len) => {
   console.log(CardsArray);
   return CardsArray;
 } 
-
-const Card = () => {
-    return (
-        <div className='w-44 h-56 border border-black rounded p-1 cursor-pointer'>
-            
-        </div>
-    );
-}
 
 const CardContainer = () => {
     
@@ -33,7 +25,7 @@ const CardContainer = () => {
             setCard(cardData);
             setLoad(false);
         }
-
+        loadCards();
     },[]);
 
     function shuffleArray(array) {
@@ -77,12 +69,23 @@ const CardContainer = () => {
     else{    
     return (
         <div className='bg-gray-700 w-ful h-4/5 p-7 flex justify-center'>
-            <div className='bg-white w-4/5 h-full flex flex-wrap p-20 gap-14 '>
+            <ul className='bg-white w-4/5 h-full flex flex-wrap p-20 gap-14 '>
                 {card.map((pic)=> (
-                    <Card/>
-                    
-                ))}          
-            </div>
+                    <li className='list-none'
+                    key={pic[0]}
+                    tabIndex="0"
+                    onKeyDown={(e) => {
+                      if (e.key === " " || e.key === "Enter") clickPic(pic, e);
+                    }}
+                    onClick={(e) => clickPic(pic, e)}
+                  >
+                    <img className='border border-blue-950 rounded-lg h-1/4 cursor-pointer' src={`${pic[0]}`} alt={pic[2]} />
+                  </li>                    
+                  
+                ))}
+                <h1>Score {score}</h1>
+                <h1>Highest {highest}</h1>          
+            </ul>
         </div>
     )
 }   
